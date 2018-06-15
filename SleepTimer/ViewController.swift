@@ -48,7 +48,23 @@ class ViewController: UIViewController {
     }
     
     @objc func NightSwitchOn(sender: UISwitch) {
-        print("switch is on")
+        if sender.isOn == true {
+            stopwatchLabel.textColor = UIColor.white
+            sleepBtn.titleLabel?.textColor = UIColor.black
+            sleepBtn.backgroundColor = UIColor.orange
+            view.backgroundColor = UIColor.black
+            
+            
+        } else if sender.isOn == false {
+            stopwatchLabel.textColor = UIColor.black
+            sleepBtn.titleLabel?.textColor = UIColor.white
+            sleepBtn.backgroundColor = UIColor.init(red: 255/255, green: 111/255, blue: 135/255, alpha: 0.75)
+            view.backgroundColor = UIColor.white
+            
+            
+        }
+        
+        
     }
     
     @objc func updateStopwatch() {
