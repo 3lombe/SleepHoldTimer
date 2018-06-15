@@ -81,6 +81,7 @@
                     <connections>
                         <outlet property="nightSwitch" destination="tc2-kG-LeD" id="Oxj-cg-eXh"/>
                         <outlet property="sleepBtn" destination="Zt4-Eb-69b" id="gFc-jb-9la"/>
+                        <outlet property="stopwatchLabel" destination="vOp-7H-Hn8" id="eNn-Gj-YxP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
