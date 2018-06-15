@@ -78,6 +78,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="nightSwitch" destination="tc2-kG-LeD" id="Oxj-cg-eXh"/>
+                        <outlet property="sleepBtn" destination="Zt4-Eb-69b" id="gFc-jb-9la"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

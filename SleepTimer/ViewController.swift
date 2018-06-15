@@ -17,10 +17,20 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         let longpress = UILongPressGestureRecognizer(target: self, action: #selector(LongPressAction))
         sleepBtn.addGestureRecognizer(longpress)
+        
+        nightSwitch.addTarget(self, action: #selector(NightSwitchOn(sender:)), for: .touchUpInside)
     }
     
-    @objc func LongPressAction() {
-   
+    @objc func LongPressAction(sender: UIGestureRecognizer) {
+        if sender.state == .began {
+            print("Pressed")
+        } else if sender.state == .ended {
+            print("Ended")
+        }
+    }
+    
+    @objc func NightSwitchOn(sender: UISwitch) {
+        print("switch is on")
     }
 
 
