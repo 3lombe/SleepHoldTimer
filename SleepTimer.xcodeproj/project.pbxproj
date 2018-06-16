@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E6BCA13CFE56A41154E44BF /* Pods_SleepTimer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 257CFD592DE243409292C6BE /* Pods_SleepTimer.framework */; };
 		BFBF4DFA20D35EEE009522C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBF4DF920D35EEE009522C4 /* AppDelegate.swift */; };
 		BFBF4DFC20D35EEE009522C4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBF4DFB20D35EEE009522C4 /* ViewController.swift */; };
 		BFBF4DFF20D35EEE009522C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFBF4DFD20D35EEE009522C4 /* Main.storyboard */; };
@@ -15,6 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1562429636D6C054510492BC /* Pods-SleepTimer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SleepTimer.release.xcconfig"; path = "Pods/Target Support Files/Pods-SleepTimer/Pods-SleepTimer.release.xcconfig"; sourceTree = "<group>"; };
+		257CFD592DE243409292C6BE /* Pods_SleepTimer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SleepTimer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFBF4DF620D35EEE009522C4 /* SleepTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SleepTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFBF4DF920D35EEE009522C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFBF4DFB20D35EEE009522C4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +25,7 @@
 		BFBF4E0020D35EF0009522C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BFBF4E0320D35EF0009522C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BFBF4E0520D35EF0009522C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FF60F0F597EF88D17D116DFB /* Pods-SleepTimer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SleepTimer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SleepTimer/Pods-SleepTimer.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E6BCA13CFE56A41154E44BF /* Pods_SleepTimer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		185A6ACF86BD3F48A5E87B73 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				257CFD592DE243409292C6BE /* Pods_SleepTimer.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2B36A23DFEAD3BED7965048C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FF60F0F597EF88D17D116DFB /* Pods-SleepTimer.debug.xcconfig */,
+				1562429636D6C054510492BC /* Pods-SleepTimer.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		BFBF4DED20D35EEE009522C4 = {
 			isa = PBXGroup;
 			children = (
 				BFBF4DF820D35EEE009522C4 /* SleepTimer */,
 				BFBF4DF720D35EEE009522C4 /* Products */,
+				2B36A23DFEAD3BED7965048C /* Pods */,
+				185A6ACF86BD3F48A5E87B73 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BFBF4E0820D35EF0009522C4 /* Build configuration list for PBXNativeTarget "SleepTimer" */;
 			buildPhases = (
+				46B619AD387DEC2E1D829EA1 /* [CP] Check Pods Manifest.lock */,
 				BFBF4DF220D35EEE009522C4 /* Sources */,
 				BFBF4DF320D35EEE009522C4 /* Frameworks */,
 				BFBF4DF420D35EEE009522C4 /* Resources */,
+				5BD1C43598F9A99C59A571DB /* [CP] Embed Pods Frameworks */,
+				0D618859B4EFA2418F3389F8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -129,6 +156,60 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0D618859B4EFA2418F3389F8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SleepTimer/Pods-SleepTimer-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		46B619AD387DEC2E1D829EA1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SleepTimer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5BD1C43598F9A99C59A571DB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SleepTimer/Pods-SleepTimer-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AnalogClock/AnalogClock.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AnalogClock.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SleepTimer/Pods-SleepTimer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BFBF4DF220D35EEE009522C4 /* Sources */ = {
@@ -278,15 +359,13 @@
 		};
 		BFBF4E0920D35EF0009522C4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FF60F0F597EF88D17D116DFB /* Pods-SleepTimer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PFEPFYUD7S;
 				INFOPLIST_FILE = SleepTimer/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = NsonsaKisala.SleepTimer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -296,15 +375,13 @@
 		};
 		BFBF4E0A20D35EF0009522C4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1562429636D6C054510492BC /* Pods-SleepTimer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PFEPFYUD7S;
 				INFOPLIST_FILE = SleepTimer/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = NsonsaKisala.SleepTimer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

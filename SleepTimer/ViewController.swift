@@ -38,7 +38,6 @@ class ViewController: UIViewController {
             
             timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(updateStopwatch), userInfo: nil, repeats: true)
             
-            
         } else if sender.state == .ended {
             print("Ended")
             
@@ -54,17 +53,13 @@ class ViewController: UIViewController {
             sleepBtn.backgroundColor = UIColor.orange
             view.backgroundColor = UIColor.black
             
-            
         } else if sender.isOn == false {
             stopwatchLabel.textColor = UIColor.black
             sleepBtn.titleLabel?.textColor = UIColor.white
             sleepBtn.backgroundColor = UIColor.init(red: 255/255, green: 111/255, blue: 135/255, alpha: 0.75)
             view.backgroundColor = UIColor.white
             
-            
         }
-        
-        
     }
     
     @objc func updateStopwatch() {
