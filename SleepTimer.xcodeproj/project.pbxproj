@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0E6BCA13CFE56A41154E44BF /* Pods_SleepTimer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 257CFD592DE243409292C6BE /* Pods_SleepTimer.framework */; };
+		BF08F92920D539F800B55BC9 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF08F92820D539F800B55BC9 /* SettingsViewController.swift */; };
 		BFBF4DFA20D35EEE009522C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBF4DF920D35EEE009522C4 /* AppDelegate.swift */; };
 		BFBF4DFC20D35EEE009522C4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBF4DFB20D35EEE009522C4 /* ViewController.swift */; };
 		BFBF4DFF20D35EEE009522C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFBF4DFD20D35EEE009522C4 /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 /* Begin PBXFileReference section */
 		1562429636D6C054510492BC /* Pods-SleepTimer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SleepTimer.release.xcconfig"; path = "Pods/Target Support Files/Pods-SleepTimer/Pods-SleepTimer.release.xcconfig"; sourceTree = "<group>"; };
 		257CFD592DE243409292C6BE /* Pods_SleepTimer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SleepTimer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF08F92820D539F800B55BC9 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		BFBF4DF620D35EEE009522C4 /* SleepTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SleepTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFBF4DF920D35EEE009522C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFBF4DFB20D35EEE009522C4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 			children = (
 				BFBF4DF920D35EEE009522C4 /* AppDelegate.swift */,
 				BFBF4DFB20D35EEE009522C4 /* ViewController.swift */,
+				BF08F92820D539F800B55BC9 /* SettingsViewController.swift */,
 				BFBF4DFD20D35EEE009522C4 /* Main.storyboard */,
 				BFBF4E0020D35EF0009522C4 /* Assets.xcassets */,
 				BFBF4E0220D35EF0009522C4 /* LaunchScreen.storyboard */,
@@ -218,6 +221,7 @@
 			files = (
 				BFBF4DFC20D35EEE009522C4 /* ViewController.swift in Sources */,
 				BFBF4DFA20D35EEE009522C4 /* AppDelegate.swift in Sources */,
+				BF08F92920D539F800B55BC9 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,7 +369,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PFEPFYUD7S;
 				INFOPLIST_FILE = SleepTimer/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = NsonsaKisala.SleepTimer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -381,7 +388,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PFEPFYUD7S;
 				INFOPLIST_FILE = SleepTimer/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = NsonsaKisala.SleepTimer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
