@@ -9,12 +9,11 @@
 import UIKit
 
 
-class ViewController: UIViewController {
+class TimerViewController: UIViewController {
     
     @IBOutlet weak var sleepBtn: UIButton!
     @IBOutlet weak var nightSwitch: UISwitch!
     @IBOutlet weak var stopwatchLabel: UILabel!
-    
     
     var timer = Timer()
     var minutes : Int = 0

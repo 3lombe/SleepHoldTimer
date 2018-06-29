@@ -10,7 +10,7 @@
 		0E6BCA13CFE56A41154E44BF /* Pods_SleepTimer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 257CFD592DE243409292C6BE /* Pods_SleepTimer.framework */; };
 		BF08F92920D539F800B55BC9 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF08F92820D539F800B55BC9 /* SettingsViewController.swift */; };
 		BFBF4DFA20D35EEE009522C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBF4DF920D35EEE009522C4 /* AppDelegate.swift */; };
-		BFBF4DFC20D35EEE009522C4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBF4DFB20D35EEE009522C4 /* ViewController.swift */; };
+		BFBF4DFC20D35EEE009522C4 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBF4DFB20D35EEE009522C4 /* TimerViewController.swift */; };
 		BFBF4DFF20D35EEE009522C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFBF4DFD20D35EEE009522C4 /* Main.storyboard */; };
 		BFBF4E0120D35EF0009522C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFBF4E0020D35EF0009522C4 /* Assets.xcassets */; };
 		BFBF4E0420D35EF0009522C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFBF4E0220D35EF0009522C4 /* LaunchScreen.storyboard */; };
@@ -22,7 +22,7 @@
 		BF08F92820D539F800B55BC9 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		BFBF4DF620D35EEE009522C4 /* SleepTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SleepTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFBF4DF920D35EEE009522C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BFBF4DFB20D35EEE009522C4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BFBF4DFB20D35EEE009522C4 /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 		BFBF4DFE20D35EEE009522C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BFBF4E0020D35EF0009522C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BFBF4E0320D35EF0009522C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -81,7 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				BFBF4DF920D35EEE009522C4 /* AppDelegate.swift */,
-				BFBF4DFB20D35EEE009522C4 /* ViewController.swift */,
+				BFBF4DFB20D35EEE009522C4 /* TimerViewController.swift */,
 				BF08F92820D539F800B55BC9 /* SettingsViewController.swift */,
 				BFBF4DFD20D35EEE009522C4 /* Main.storyboard */,
 				BFBF4E0020D35EF0009522C4 /* Assets.xcassets */,
@@ -219,7 +219,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BFBF4DFC20D35EEE009522C4 /* ViewController.swift in Sources */,
+				BFBF4DFC20D35EEE009522C4 /* TimerViewController.swift in Sources */,
 				BFBF4DFA20D35EEE009522C4 /* AppDelegate.swift in Sources */,
 				BF08F92920D539F800B55BC9 /* SettingsViewController.swift in Sources */,
 			);
