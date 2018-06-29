@@ -41,9 +41,9 @@ class ViewController: UIViewController {
             
         } else if sender.state == .ended {
             print("Ended")
-            
             timer.invalidate()
-            
+            //Make paused time print to table view in SettingsView.
+            //After printed to view, reset timer to 00:00:00
         }
     }
     
