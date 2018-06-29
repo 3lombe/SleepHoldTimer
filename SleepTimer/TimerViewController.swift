@@ -41,7 +41,22 @@ class TimerViewController: UIViewController {
         } else if sender.state == .ended {
             print("Ended")
             timer.invalidate()
+            
+            print(stopwatchLabel.text!)
+            
+            
+            minutes = 0
+            seconds = 0
+            fractions = 0
+            
+            stopwatchString = "00:00:00"
+            stopwatchLabel.text = stopwatchString
+            
+            
             //Make paused time print to table view in SettingsView.
+            
+            
+            
             //After printed to view, reset timer to 00:00:00
         }
     }
