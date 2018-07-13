@@ -144,35 +144,41 @@
                                     <segue destination="BYZ-38-t0r" kind="presentation" id="fVa-Pv-abz"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aTF-nD-5xn" userLabel="ClockView" customClass="AnalogClockView" customModule="AnalogClock">
-                                <rect key="frame" x="99" y="28" width="177" height="177"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="24W-cI-wxu">
+                                <rect key="frame" x="0.0" y="112" width="375" height="87"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="177" id="2vL-oy-I1J"/>
-                                    <constraint firstAttribute="height" constant="177" id="5kd-i5-gOA"/>
+                                    <constraint firstAttribute="width" constant="375" id="8Co-k7-Lfx"/>
+                                    <constraint firstAttribute="height" constant="87" id="W8t-ve-UKd"/>
                                 </constraints>
-                            </view>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="24W-cI-wxu" firstAttribute="centerX" secondItem="svV-pk-REF" secondAttribute="centerX" id="1r7-bo-rLx"/>
                             <constraint firstItem="7xO-qb-Qqu" firstAttribute="leading" secondItem="lVy-c8-v0Q" secondAttribute="leading" id="BLw-oM-L96"/>
-                            <constraint firstItem="7xO-qb-Qqu" firstAttribute="top" secondItem="aTF-nD-5xn" secondAttribute="bottom" constant="2" id="EYg-wL-1zO"/>
-                            <constraint firstItem="aTF-nD-5xn" firstAttribute="centerX" secondItem="svV-pk-REF" secondAttribute="centerX" id="EoG-Vs-Sh9"/>
+                            <constraint firstItem="24W-cI-wxu" firstAttribute="trailing" secondItem="lVy-c8-v0Q" secondAttribute="trailing" id="JRs-o1-fc4"/>
                             <constraint firstItem="jrc-Mq-ucz" firstAttribute="leading" secondItem="lVy-c8-v0Q" secondAttribute="leading" constant="16" id="R1n-Fc-0Pl"/>
                             <constraint firstItem="7xO-qb-Qqu" firstAttribute="bottom" secondItem="lVy-c8-v0Q" secondAttribute="bottom" id="Ss0-w4-5UZ"/>
+                            <constraint firstItem="24W-cI-wxu" firstAttribute="leading" secondItem="lVy-c8-v0Q" secondAttribute="leading" id="TMo-bg-D59"/>
                             <constraint firstItem="jrc-Mq-ucz" firstAttribute="top" secondItem="lVy-c8-v0Q" secondAttribute="top" constant="8" id="UtG-r5-hTf"/>
                             <constraint firstItem="7xO-qb-Qqu" firstAttribute="top" secondItem="lVy-c8-v0Q" secondAttribute="top" constant="187" id="fzb-fM-ru4"/>
                             <constraint firstItem="7xO-qb-Qqu" firstAttribute="trailing" secondItem="lVy-c8-v0Q" secondAttribute="trailing" id="qDI-tc-RrV"/>
+                            <constraint firstItem="7xO-qb-Qqu" firstAttribute="top" secondItem="24W-cI-wxu" secondAttribute="bottom" constant="8" id="yLF-9e-9St"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="lVy-c8-v0Q"/>
                     </view>
                     <connections>
+                        <outlet property="backButton" destination="jrc-Mq-ucz" id="F3g-Mg-mBf"/>
                         <outlet property="dataLogTableView" destination="aPQ-uI-4yG" id="cbk-lu-Gze"/>
+                        <outlet property="timeStampLabel" destination="24W-cI-wxu" id="Rc2-G6-e7G"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mup-D3-YNr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="901.60000000000002" y="133.5832083958021"/>
+            <point key="canvasLocation" x="1158" y="134"/>
         </scene>
     </scenes>
 </document>

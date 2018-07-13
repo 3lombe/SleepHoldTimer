@@ -7,14 +7,20 @@
 //
 
 import UIKit
-import AnalogClock
 
 class SettingsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var timeStampLabel: UILabel!
     @IBOutlet weak var dataLogTableView: UITableView!
+    
+    var timeStampString = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        timeStampLabel.text = timeStampString
+        
         
     }
     

@@ -44,20 +44,20 @@ class TimerViewController: UIViewController {
             
             print(stopwatchLabel.text!)
             
-            
-            minutes = 0
-            seconds = 0
-            fractions = 0
-            
-            stopwatchString = "00:00:00"
-            stopwatchLabel.text = stopwatchString
-            
-            
             //Make paused time print to table view in SettingsView.
             
             
             
             //After printed to view, reset timer to 00:00:00
+//            minutes = 0
+//            seconds = 0
+//            fractions = 0
+//            
+//            stopwatchString = "00:00:00"
+//            stopwatchLabel.text = stopwatchString
+            
+            
+            
         }
     }
     
@@ -93,6 +93,12 @@ class TimerViewController: UIViewController {
         let minutesString = minutes > 9 ? "\(minutes)" : "0\(minutes)"
         let stopwatchString = "\(minutesString):\(secondsString):\(fractionsString)"
         stopwatchLabel.text = String(stopwatchString)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destinationView: SettingsViewController = segue.destination as! SettingsViewController
+        
+        destinationView.timeStampString = stopwatchLabel.text!
     }
 
 
