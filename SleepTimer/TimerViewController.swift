@@ -14,65 +14,82 @@ class TimerViewController: UIViewController {
     @IBOutlet weak var sleepBtn: UIButton!
     @IBOutlet weak var nightSwitch: UISwitch!
     @IBOutlet weak var stopwatchLabel: UILabel!
+    @IBOutlet weak var settingsBtn: UIButton!
     
     var timer = Timer()
     var minutes : Int = 0
     var seconds : Int = 0
     var fractions : Int = 0
     
+    var addLap : Bool = false
+    
     let startStopwatch : Bool = true
     var stopwatchString = ""
+    
+    var tvLaps : [String] = []
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        stopwatchLabel.text = "00:00:00"
+        
         let longpress = UILongPressGestureRecognizer(target: self, action: #selector(LongPressAction))
         sleepBtn.addGestureRecognizer(longpress)
         
         nightSwitch.addTarget(self, action: #selector(NightSwitchOn(sender:)), for: .touchUpInside)
     }
     
+    
+    // Button Action Method
     @objc func LongPressAction(sender: UIGestureRecognizer) {
         if sender.state == .began {
-            print("Pressed")
             
+            print("Pressed")
             timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(updateStopwatch), userInfo: nil, repeats: true)
             
+            addLap = false
+            
         } else if sender.state == .ended {
-            print("Ended")
-            timer.invalidate()
             
-            print(stopwatchLabel.text!)
-            
-            //Make paused time print to table view in SettingsView.
-            
-            
-            
-            //After printed to view, reset timer to 00:00:00
-//            minutes = 0
-//            seconds = 0
-//            fractions = 0
-//            
-//            stopwatchString = "00:00:00"
-//            stopwatchLabel.text = stopwatchString
-            
-            
-            
-            
-            
+            if addLap == true {
+                
+                tvLaps.insert(stopwatchString, at: 0)
+                
+                
+            } else {
+                
+                addLap = false
+                
+                timer.invalidate()
+                print("Ended")
+                print("\(stopwatchLabel.text!) \n" )
+                
+                minutes = 0
+                seconds = 0
+                fractions = 0
+                
+                //stopwatchString = "00:00:00"
+                //stopwatchLabel.text! = stopwatchString
+                
+                
+            }
             
         }
     }
     
+    // Night Switch Method
     @objc func NightSwitchOn(sender: UISwitch) {
         if sender.isOn == true {
             stopwatchLabel.textColor = UIColor.white
+            settingsBtn.titleLabel?.textColor = UIColor.white
             sleepBtn.titleLabel?.textColor = UIColor.black
             sleepBtn.backgroundColor = UIColor.orange
             view.backgroundColor = UIColor.black
             
         } else if sender.isOn == false {
             stopwatchLabel.textColor = UIColor.black
+            settingsBtn.titleLabel?.textColor = UIColor.white
             sleepBtn.titleLabel?.textColor = UIColor.white
             sleepBtn.backgroundColor = UIColor.init(red: 255/255, green: 111/255, blue: 135/255, alpha: 0.75)
             view.backgroundColor = UIColor.white
@@ -80,6 +97,7 @@ class TimerViewController: UIViewController {
         }
     }
     
+    // Update Stopwatch Method
     @objc func updateStopwatch() {
         fractions += 1
         if fractions == 100 {
@@ -98,19 +116,18 @@ class TimerViewController: UIViewController {
         stopwatchLabel.text = String(stopwatchString)
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let destinationView: SettingsViewController = segue.destination as! SettingsViewController
-        
-        destinationView.timeStampString = stopwatchLabel.text!
-    }
-    
-    
     
     // Create an unwind segue
     @IBAction func backToTimerViewController(_ segue: UIStoryboardSegue) {
         
     }
+    
+    // Pass data to SettingsVC
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destinationView: SettingsViewController = segue.destination as! SettingsViewController
+        
+        destinationView.timeStampString = stopwatchLabel.text!
 
-
-
+        destinationView.svLaps = tvLaps
+    }
 }

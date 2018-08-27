@@ -11,31 +11,40 @@ import UIKit
 class SettingsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var backButton: UIButton!
-    @IBOutlet weak var timeStampLabel: UILabel!
     @IBOutlet weak var dataLogTableView: UITableView!
     
     var timeStampString = ""
+    var svLaps : [String] = []
+    
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        timeStampLabel.text = timeStampString
         
+        svLaps.insert(timeStampString, at: 0)
+        dataLogTableView.reloadData()
         
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell = UITableViewCell(style: UITableViewCellStyle.value1, reuseIdentifier: "Cell")
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell(style: UITableViewCellStyle.value1, reuseIdentifier: "Cell")
         
         cell.backgroundColor = self.view.backgroundColor
-        cell.textLabel?.text = "Sleep Log"
-        cell.detailTextLabel?.text = "00:00:00"
+        cell.textLabel?.text = "Sleep Log \(svLaps.count-indexPath.row)"
+        cell.detailTextLabel?.text = svLaps[indexPath.row]
         
         return cell
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return svLaps.count
     }
+    
+    // Pass data to TimerVC
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        let destinationView: TimerViewController = segue.destination as! TimerViewController
+//    }
     
 }
