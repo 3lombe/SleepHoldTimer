@@ -58,6 +58,9 @@ class TimerViewController: UIViewController {
             
             
             
+            
+            
+            
         }
     }
     
@@ -99,6 +102,13 @@ class TimerViewController: UIViewController {
         let destinationView: SettingsViewController = segue.destination as! SettingsViewController
         
         destinationView.timeStampString = stopwatchLabel.text!
+    }
+    
+    
+    
+    // Create an unwind segue
+    @IBAction func backToTimerViewController(_ segue: UIStoryboardSegue) {
+        
     }
 
 

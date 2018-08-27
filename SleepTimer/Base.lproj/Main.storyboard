@@ -141,7 +141,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" id="fVa-Pv-abz"/>
+                                    <segue destination="ID5-Nk-KjI" kind="unwind" unwindAction="backToTimerViewController:" id="kgD-hH-btm"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="24W-cI-wxu">
@@ -177,6 +177,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mup-D3-YNr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="ID5-Nk-KjI" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1158" y="134"/>
         </scene>
